@@ -1,0 +1,68 @@
+.work {
+   background-color: $ter-color;
+   padding: 2rem;
+   text-align: center;
+
+   &-title {
+      color: white;
+      display: inline-block;
+      font-size: clamp(3rem, 5vw, 4.5rem);
+      position: relative;
+      z-index: 1;
+
+      &::after {
+         background-color: $pri-color;
+         content: "";
+         height: clamp(1.8rem, 2vw, 2.7rem);
+         left: 0;
+         position: absolute;
+         top: 45%;
+         width: 110%;
+         z-index: -1;
+      }
+   }
+
+   &-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 3rem;
+
+      .work-card {
+         clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0 80%, 0% 20%);
+         cursor: pointer;
+         flex-grow: 1;
+         max-width: 30rem;
+         padding: 2rem;
+         position: relative;
+         width: 28rem;
+
+         img {
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.4s ease;
+            width: 100%;
+
+            &:hover {
+               filter: sepia(50%);
+               transform: scale(1.06);
+            }
+         }
+      }
+   }
+
+   &-btn {
+      background: $sec-color;
+      border-radius: 5px;
+      display: inline-block;
+      font-size: clamp(1.8rem, 1.5vw, 2rem);
+      padding: 0.1rem;
+      text-align: center;
+      transition: all 0.3s ease;
+      width: clamp(10rem, 2vw, 30%);
+
+      &:hover {
+         color: $pri-color;
+      }
+   }
+}

@@ -1,0 +1,30 @@
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/animation";
+@import "base/reset";
+@import "base/typography";
+@import "base/utilities";
+
+@import "components/about";
+@import "components/buttons";
+@import "components/carousel";
+@import "components/services";
+@import "components/skills";
+@import "components/slider";
+@import "components/testimonials";
+@import "components/works";
+
+@import "layout/aside";
+@import "layout/footer";
+@import "layout/forms";
+@import "layout/grid";
+@import "layout/header";
+@import "layout/main";
+@import "layout/navigation";
+@import "layout/sidebar";
+
+@import "pages/about";
+@import "pages/contact";
+@import "pages/home";

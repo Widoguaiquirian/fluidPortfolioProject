@@ -1,0 +1,28 @@
+body {
+   color: black;
+   font-family: "Baloo tamma 2", cursive;
+   font-size: 1.6rem;
+   line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+   margin: 0;
+}
+
+a {
+   text-decoration: none;
+   color: white;
+}
+
+p::selection,
+h1::selection,
+h2::selection,
+h3::selection {
+   background-color: rgb(0, 64, 94);
+}
+
+h3::selection {
+   background-color: white;
+}

@@ -1,0 +1,39 @@
+.aside-nav {
+   height: 100vh;
+   left: 0;
+   position: sticky;
+   top: 0;
+
+   &-content {
+      background-color: $pri-color;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: space-between;
+      object-fit: cover;
+      width: calc(3vw + 3vh);
+
+      &-list {
+         align-items: center;
+         display: flex;
+         flex-direction: column;
+         height: 100%;
+         justify-content: flex-end;
+      }
+
+      &-item {
+         margin-bottom: clamp(1.8rem, 2vw, 3rem);
+
+         .aside-nav-icon {
+            height: clamp(2rem, 2vw, 3rem);
+            transition: all 0.5s ease;
+            width: clamp(2rem, 2vw, 3rem);
+            fill: white;
+
+            &:hover {
+               fill: $sec-color;
+            }
+         }
+      }
+   }
+}

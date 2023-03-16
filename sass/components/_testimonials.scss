@@ -1,0 +1,46 @@
+.testimonials {
+   align-items: center;
+   background-color: $sec-color;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   padding: 6rem 2rem;
+
+   &-card {
+      border-radius: 3px;
+      cursor: pointer;
+      flex-basis: 40rem;
+      flex-grow: 1;
+      margin: 2rem;
+      max-width: 650px;
+      position: relative;
+
+      &:hover .testimonials-card-content {
+         background-color: $pri-color;
+         transform: translateX(-3%) translateY(-3%);
+      }
+
+      &-img img {
+         border-radius: 5px;
+      }
+
+      &-content {
+         background-color: #014d4e68;
+         border-radius: 3px;
+         bottom: 10px;
+         color: white;
+         padding: clamp(1rem, 2vw, 2rem);
+         position: absolute;
+         transition: all 0.4s ease;
+         width: clamp(90%, 3vw, 75%);
+
+         .testimonials-car-title {
+            font-size: clamp(2rem, 3vw, 3rem);
+         }
+
+         .testimonials-car-paragraph {
+            margin: 0;
+         }
+      }
+   }
+}

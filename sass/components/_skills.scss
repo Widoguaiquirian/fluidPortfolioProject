@@ -1,0 +1,190 @@
+.skills {
+   align-items: center;
+   background-color: $ter-color;
+   display: flex;
+   flex-direction: column;
+   padding: 5rem 0;
+
+   &-title {
+      color: white;
+      display: inline-block;
+      font-size: clamp(3rem, 5vw, 4.5rem);
+      position: relative;
+      z-index: 1;
+
+      &::after {
+         background-color: $pri-color;
+         content: "";
+         height: clamp(1.8rem, 2vw, 2.7rem);
+         left: 0;
+         position: absolute;
+         top: 45%;
+         width: 110%;
+         z-index: -1;
+      }
+   }
+
+   &-content {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+
+      .set {
+         flex-basis: 50rem;
+         flex-grow: 1;
+         padding: 1rem 3rem;
+         display: flex;
+         flex-direction: column;
+
+         .skill {
+            background-color: rgba(128, 128, 128, 0.281);
+            border-radius: 25px;
+            border: 3px solid var(--pri-color);
+            font-size: clamp(1.4rem, 2vw, 2rem);
+            height: clamp(3.5rem, 2vw, 5rem);
+            margin: 2rem 0;
+            overflow: hidden;
+            position: relative;
+
+            &-name {
+               color: white;
+               float: left;
+               font-weight: bold;
+               left: 10px;
+               line-height: 0;
+               margin: 0;
+               padding: 0;
+               position: absolute;
+               text-transform: uppercase;
+               top: 55%;
+               z-index: 2;
+            }
+
+            .progress {
+               animation-duration: 5s;
+               animation-iteration-count: infinite;
+               animation-timing-function: cubic-bezier(0.2, 0.2, 0.1, 0.99);
+               border-right: 5px solid rgba(255, 255, 255, 0.342);
+               height: 100%;
+               position: absolute;
+               width: 0%;
+            }
+
+            .skill-percentage {
+               animation-duration: 5s;
+               animation-iteration-count: infinite;
+               animation-name: transparency;
+               animation-timing-function: cubic-bezier(0.2, 0.2, 0.1, 0.99);
+               color: white;
+               float: right;
+               font-size: 2rem;
+               font-weight: bold;
+               margin-right: 0.5rem;
+               opacity: 0;
+            }
+
+            @keyframes transparency {
+               to {
+                  opacity: 1;
+               }
+            }
+
+            .progress.html {
+               animation-name: ani-html;
+               background-color: #e98766;
+            }
+
+            /* Animation javascript */
+            @keyframes ani-html {
+               from {
+                  width: 0%;
+               }
+
+               to {
+                  width: 100%;
+               }
+            }
+
+            .progress.css {
+               animation-name: ani-css;
+               background-color: #1db4aa;
+            }
+
+            /* Animation javascript */
+            @keyframes ani-css {
+               from {
+                  width: 0%;
+               }
+
+               to {
+                  width: 80%;
+               }
+            }
+
+            .progress.jquery {
+               animation-name: ani-jquery;
+               background-color: #d89115;
+            }
+
+            /* Animation javascript */
+            @keyframes ani-jquery {
+               from {
+                  width: 0%;
+               }
+
+               to {
+                  width: 72%;
+               }
+            }
+
+            .progress.javascript {
+               animation-name: ani-javascript;
+               background-color: #c25045;
+            }
+
+            /* Animation javascript */
+            @keyframes ani-javascript {
+               from {
+                  width: 0%;
+               }
+
+               to {
+                  width: 61%;
+               }
+            }
+
+            .progress.java {
+               animation-name: ani-java;
+               background-color: #8c9611;
+            }
+
+            /* Animation java */
+            @keyframes ani-java {
+               from {
+                  width: 0%;
+               }
+
+               to {
+                  width: 55%;
+               }
+            }
+
+            .progress.sass {
+               background-color: #5d65a6;
+               animation-name: ani-sass;
+            }
+
+            /* Animation sass */
+            @keyframes ani-sass {
+               from {
+                  width: 0%;
+               }
+
+               to {
+                  width: 60%;
+               }
+            }
+         }
+      }
+   }
+}

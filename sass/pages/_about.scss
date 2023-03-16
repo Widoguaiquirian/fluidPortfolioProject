@@ -1,0 +1,61 @@
+.about {
+   align-items: center;
+   background-color: $sec-color;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   padding: 5rem 2rem;
+
+   &-img {
+      max-width: 70vh;
+
+      img {
+         border-radius: 5px;
+         height: 100%;
+         object-fit: cover;
+         object-position: center;
+         width: 100%;
+      }
+   }
+
+   &-img,
+   &-content {
+      flex-basis: 40rem;
+      flex-grow: 1;
+      padding: 2rem;
+   }
+
+   .about-title {
+      color: white;
+      display: inline-block;
+      font-size: clamp(3rem, 5vw, 4.5rem);
+      position: relative;
+
+      &::after {
+         background-color: $pri-color;
+         border-radius: 15px;
+         bottom: clamp(-35px, 2vw, 10px);
+         content: "";
+         height: 0.4rem;
+         left: 0;
+         position: absolute;
+         width: 30%;
+      }
+   }
+
+   .about-text {
+      color: white;
+      font-size: clamp(1.8rem, 1.5vw, 2rem);
+   }
+
+   .about-btn {
+      background: $pri-color;
+      border-radius: 5px;
+      display: block;
+      font-size: clamp(1.8rem, 1.5vw, 2rem);
+      padding: 0.1rem;
+      text-align: center;
+      width: clamp(11rem, 2vw, 30%);
+      width: clamp(11rem, 2vw, 30%);
+   }
+}
